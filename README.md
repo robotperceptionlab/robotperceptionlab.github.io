@@ -20,3 +20,10 @@ pelican content -o output -s pelicanconf.py
 ghp-import output
 git push origin gh-pages
 ```
+
+## Saving source & template on GitHub
+```
+git add . # or the corresponding updated file
+git commit -m "Some commit message"
+git push origin master
+```
