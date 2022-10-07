@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>ObjectDetection@Work</title>
+    <meta name="date" content="2018-01-01 00:00"/>
+    <meta name="category" content="RoboCup@Work" />
+</head>
+<body>
+<p><i>A dataset to train object classification or detection algorithms on RoboCup@Work objects.</i></p>
+<h2>What is it?</h2>
+<ul>
+    <li>A dataset containing more than 35000 RGBD images taken from an Intel SR300 in a <a
+            href="http://www.robocupatwork.org/">RoboCup@Work</a> setting
+    </li>
+    <li>About 33500 are labeled as one of the 13 RoboCup@Work object types (the others show multiple objects, or
+        decoy, non-RoboCup objects)
+    </li>
+    <li>14000 images are manually labeled with X/Y pickup coordinates.</li>
+</ul>
+<h2>Download</h2>
+<p>Source code: <a href="https://github.com/smARTLab-liv/ObjectDetect">GitHub Repo</a></p>
+<p>Download the dataset as a .zip archive from one of these mirrors:<br><a
+        href="http://wordpress.csc.liv.ac.uk/smartlab/objectdetectionwork/ObjectDetectionAtWork.zip">Mirror 1</a> <a
+        href="https://intranet.csc.liv.ac.uk/research/robotics/ObjectDetectionAtWork.zip">Mirror 2</a><br>Filesize:
+    9.5 GB<br>md5sum: 8d5e2ee49a504a47f482a5ab8f7b2a3b</p>
+<h2>Details</h2>
+<ul>
+    <li>While the training consists of mostly objects placed on a (small, non-RoboCup) rotating table, the
+        evaluation set consists entirely of objects placed on appropriate platforms.
+    </li>
+    <li>The training and evaluation set folders are split into the different object types: Axis, Bearing,
+        Bearing_Box, Distance_Tube (aluminium spacer ring), F20_20_B (small black aluminium profile), F20_20_G
+        (small grey aluminium profile), M20 (nut), M20_100 (bolt), M30 (nut), Motor, R20 (plastic tube), S40_40_B
+        (large black aluminium profile), S_40_40_G (large grey aluminium profile), MultipleObjects (multiple,
+        different objects shown in per image) and MultipleDuplicateObjects (multiple, possibly duplicate objects
+        shown per image)
+    </li>
+    <li>Color and depth images are separated into folders. Both are saved in png format.</li>
+    <li>Color images have 3 or 4 channels: If the fourth (alpha) channel is used, it denotes the position of the
+        pickup-point of the object
+    </li>
+    <li>If available, the alpha channel uses the following mapping of value to object type:<br>0: Axis<br>1: Bearing<br>2:
+        Bearing Box<br>3: Distance Tube<br>4: F20_20_B<br>5: F20_20_G<br>6: M20<br>7: M20_100<br>8: M30<br>9:
+        Motor<br>10: R20<br>11: S40_40_B<br>12: S_40_40_G<br>255: No Object/Background<br>Note that each object is
+        only marked with a single pixel.
+    </li>
+    <li>Depth images are 8-bit, one channel only. Values range from 0 (0 cm) to 255 (60 cm distance)</li>
+    <li>The average pixel value (for normalizing purposes) of the training set is (RGBD) [120.37184024,
+        121.55885514, 118.12432115, 131.96968385]
+    </li>
+</ul>
+<table>
+    <tbody>
+    <tr>
+        <td style="margin: 0; padding: 0; border: 0;">&nbsp;</td>
+        <td style="margin: 0; padding: 0; border: 0;">&nbsp;</td>
+    </tr>
+    </tbody>
+</table>
+
+
+<div class="wp-block-columns">
+    <div class="wp-block-column">
+        <figure class="wp-block-image size-full">
+            <img loading="lazy"
+                 src="{static}ODAtWorkColor.jpg">
+            <figcaption>Color Channel on a sample image</figcaption>
+        </figure>
+    </div>
+
+
+    <div class="wp-block-column">
+        <figure class="wp-block-image size-full">
+            <img loading="lazy"
+                 src="{static}ODAtWorkDepth.jpg">
+            <figcaption>Depth Channel on a sample image</figcaption>
+        </figure>
+    </div>
+</div>
+</body>
+</html>
